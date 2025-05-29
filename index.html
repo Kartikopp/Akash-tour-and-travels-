@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cab Booking Service</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: #000;
+      color: #fff;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #FFD700;
+    }
+
+    .contact-number {
+      font-weight: bold;
+    }
+
+    .hero {
+      background: #007BFF;
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0 0 10px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .booking-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #FFF0BD;
+      padding: 20px;
+    }
+
+    .booking-form input,
+    .booking-form button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .booking-form button {
+      background: #FFD700;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .booking-form button:hover {
+      background: #e0c200;
+    }
+
+    .tariffs {
+      padding: 60px 0;
+      background: url('https://lh3.googleusercontent.com/p/AF1QipOgUWFqvBI1xSFSvfqYhD90vMW2OVh2DWNmJqmc=s1328-w720-h1328-rw') no-repeat center center/cover;
+      text-align: center;
+    }
+
+    .tariffs h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .tariff-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .tariff {
+      background: #FFF;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .tariff img {
+      width: 100%;
+      height: auto;
+    }
+
+    .tariff h3 {
+      margin: 15px 0 10px;
+    }
+
+    .services {
+      padding: 60px 0;
+      background: #111;
+      color: #81D8D0;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .service-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    .service h3 {
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contact textarea {
+      resize: vertical;
+    }
+
+    .contact button {
+      background: #FFD700;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #e0c200;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">Akash Tour And Travels</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tariffs">Tariffs</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </nav>
+      <div class="contact-number">+91 8077078203</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-text">
+        <h1>BOOK YOUR CAB NOW</h1>
+        <p>Reliable cab service in New York</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>📬 Contact Me</h2>
+    <form action="https://formspree.io/f/xblonyrp" method="POST" onsubmit="return showSuccess()">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Write Full Details Here." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Tariffs Section -->
+  <section class="tariffs" id="tariffs">
+    <div class="container">
+      <h2>Tariffs</h2>
+      <div class="tariff-boxes">
+        <div class="tariff">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqpLMepwsXpV8_t5M37TLmU55_RelcXMOkmUaNRc6_emKcf6l_bqZfR6eKr0A03-6zciB9eeEKasCGL8LVa3NwCp76mYHWMYIt7qTPT6TVYM-ACaghb7F_HU6alfiVkVBFcTp6NI9EX2atJ=s1328-w720-h1328-rw" alt="Xcent">
+          <h3>Economy Class</h3>
+          <p>₹12/km</p>
+        </div>
+        <div class="tariff">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-mSrurLTVm0BJfg4bAMM6mKAe6VzzgpAvjsi_2maQGOyY_f_syHuYt7U&s=10" alt="Standard Class">
+          <h3>Standard Class</h3>
+          <p>₹15/km</p>
+        </div>
+        <div class="tariff">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90Xlib6Nb4KnuKPIZzMQd1Wo8Xz8d2d_WKw&s" alt="Amaze">
+          <h3>Business Class</h3>
+          <p>₹20/km</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="service-boxes">
+        <div class="service">
+          <h3>Fast Booking</h3>
+          <p>Quick and easy online cab booking system.</p>
+        </div>
+        <div class="service">
+          <h3>Reliable Drivers</h3>
+          <p>Our drivers are professionally trained and experienced.</p>
+        </div>
+        <div class="service">
+          <h3>24/7 Service</h3>
+          <p>We operate around the clock to serve you better.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showSuccess() {
+      alert("Message sent successfully!");
+      return true;
+    }
+  </script>
+</body>
+</html>
